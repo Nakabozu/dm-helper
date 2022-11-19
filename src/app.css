@@ -1,0 +1,39 @@
+html{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  font-family: rustyCola, fantasy, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+body {
+  display: flex;
+  height:100%;
+  width:100%;
+  margin: 0;
+  padding: 0;
+
+  background: #004874;
+  color: #FFEEDD
+}
+
+#app {
+  display: flex;
+  min-height:100%;
+  min-width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: rustyCola;
+  src: url("./assets//RustyColaPen-Regular.otf");
+}
