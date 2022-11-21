@@ -22,12 +22,23 @@
     }
 </script>
 
+
 <button on:click={()=>{onClick();}} class="soundboard-button">
     {isPlaying ? '⏵' : ''}{text}
 </button>
 
+
 <style>
     .soundboard-button{
+        padding: 3px 15px;
         height: fit-content;
+        
+        font-family: 'norse', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        line-height: 20px;
+
+        border: none;
+
+        cursor: pointer;
     }
 </style>

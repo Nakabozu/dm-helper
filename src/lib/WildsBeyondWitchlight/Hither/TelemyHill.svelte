@@ -1,65 +1,69 @@
 <script lang="ts">
     import SoundboardButton from "../../common/SoundboardButton.svelte";
+    import RippleContainer from "../../common/RippleContainer.svelte";
     import Footsteps from "../../../assets/EchoingFootstepsStone.mp3";
     import KeysJingling from "../../../assets/KeysJingling.mp3";
 
     import { hitherStrings } from "./hither-strings";
 </script>
 
-<h1>Telemy Hill</h1>
-<div class="flex-row flex-grow">
+<span class="flex-row flex-grow header"><h1>Telemy Hill</h1></span>
+<article class="flex-row">
     <!--COLUMN 1-->
-    <div class="soundboard-panel flex-row flex-wrap width-50">
-        <SoundboardButton sound={Footsteps} text='Footsteps' isLooped={true}/>
-        <SoundboardButton sound={KeysJingling} text='Keys Jingling' isLooped={true}/>
-    </div>
+    <section class="soundboard-panel flex-column">
+        <h2>Soundboard</h2>
+        <div class="flex-row flex-wrap soundboard-buttons width-100">
+            <RippleContainer><SoundboardButton sound={Footsteps} text='Footsteps' isLooped={true}/></RippleContainer>
+            <RippleContainer><SoundboardButton sound={KeysJingling} text='Keys Jingling' isLooped={true}/></RippleContainer>
+        </div>
+    </section>
     <!--COLUMN 2-->
-    <article class="flex-row module-text width-50">
+    <article class="flex-row module-text flex-grow">
         <section>
-            <h2>Meeting Jingle Jangle</h2>
-            <p>{hitherStrings.meetingJingle}</p>
-            <h2>Descending</h2>
-            <p>{hitherStrings.descending}</p>
-            <h2>Insight Check</h2>
-            <p>{hitherStrings.insight}</p>
-            <h2>Jingle Jangle's Tale of Woe</h2>
-            <p>{hitherStrings.taleOfWoe}</p>
-            <h2>Offerings to Jingle Jangle</h2>
-            <p>{hitherStrings.offerings}</p>
+            <h3>Meeting Jingle Jangle</h3>
+            <p>{hitherStrings.telemyHill.meetingJingle}</p>
+            <h3>Descending</h3>
+            <p>{hitherStrings.telemyHill.jinglesChamber}</p>
+            <h3>Insight Check</h3>
+            <p>{hitherStrings.telemyHill.insight}</p>
+            <h3>Jingle Jangle's Tale of Woe</h3>
+            <p>{hitherStrings.telemyHill.taleOfWoe}</p>
+            <h3>Offerings to Jingle Jangle</h3>
+            <p>{hitherStrings.telemyHill.offerings}</p>
+            <h3>Descending to the Core</h3>
+            <p>{hitherStrings.telemyHill.theCore}</p>
         </section>
     </article>
-</div>
+</article>
 
 <style>
-    .flex-row{
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .flex-column{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .flex-grow{
-        flex-grow: 1;
-    }
-
-    .flex-wrap{
-        flex-wrap: wrap;
-    }
-
-    .width-50{
-        width: 50%;
+    .header{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 
     .soundboard-panel{
         display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-grow: 1;
+
+        margin: 0px 10px;
+        padding: 10px 25px;
+    
+        border-radius: 25px;
+
+        background: #101112;
+    }
+
+    .soundboard-buttons{
         justify-content: space-between;
-        background-color: aqua;
     }
 
     .module-text{
-        background-color: blueviolet;
+        display:flex;
+        justify-content: space-evenly;
+        width: calc(75vw - 20px);
     }
 </style>

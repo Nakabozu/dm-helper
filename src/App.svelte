@@ -21,10 +21,6 @@
 </main>
 
 <style>
-  h1{
-    line-height: 0px;
-  }
-
   main{
     height: 100vh;
     width: 100vw;
