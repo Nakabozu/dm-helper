@@ -1,7 +1,7 @@
 <script lang="ts">
   import Navbar from './lib/common/Navbar.svelte';
   import SelectModule from './pages/SelectModule.svelte';
-  import WildBeyondWitchlight from './pages/WildBeyondWitchlight.svelte';
+  import WildBeyondWitchlight from './lib/WildsBeyondWitchlight/WildBeyondWitchlight.svelte';
 
 	import { page, moduleMenuObjects } from './appStore';
 
@@ -13,11 +13,13 @@
 
 <main>
   <Navbar/>
-  {#each moduleMenuObjects as moduleMenuObject}
-    {#if $page === moduleMenuObject.value}
+    {#if $page === 0}
+      <SelectModule/>
+    {/if}
+
+    {#if $page === 1}
       <WildBeyondWitchlight/>
     {/if}
-  {/each}
 </main>
 
 <style>

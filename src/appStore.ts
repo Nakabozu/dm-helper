@@ -12,4 +12,4 @@ export const moduleMenuObjects = [
 ]
 
 // State Management
-export const page = writable(0);
+export const page = writable(1);

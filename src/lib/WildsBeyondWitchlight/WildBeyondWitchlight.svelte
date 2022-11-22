@@ -1,8 +1,8 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <script lang="ts">
-    import Carnival from '../lib/WildsBeyondWitchlight/CarnivalSelect.svelte'
-    import Hither from '../lib/WildsBeyondWitchlight/HitherSelect.svelte'
-    import { witchlightChapter } from '../lib/WildsBeyondWitchlight/witchlightStore';
+    import Carnival from './CarnivalSelect.svelte'
+    import Hither from './HitherSelect.svelte'
+    import { witchlightChapter } from './witchlightStore';
 
     const changeChapter = (newChapter: number) => {
         $witchlightChapter = newChapter;
@@ -15,7 +15,7 @@
         <h3>Chapter Select</h3>
         <ul>
             <li on:click={()=>{changeChapter(1)}}>Chapter 1: Witchlight Carnival</li>
-            <li>Chapter 2: Hither</li>
+            <li on:click={()=>{changeChapter(2)}}>Chapter 2: Hither</li>
             <li>Chapter 3: Thither</li>
             <li>Chapter 4: Yon</li>
             <li>Chapter 5: Palace of Heart's Desire</li>

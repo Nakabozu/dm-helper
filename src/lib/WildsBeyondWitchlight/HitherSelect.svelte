@@ -1,6 +1,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <script lang="ts">
     import TelemyHill from './Hither/TelemyHill.svelte'
+    import Owell from './Hither/Owell.svelte';
 
     import {hitherTopic} from './witchlightStore'
 
@@ -18,6 +19,7 @@
         <li on:click={()=>{setHitherTopic(4)}}>Brigands' Tollway</li>
         <li on:click={()=>{setHitherTopic(5)}}>Downfall</li>
         <li on:click={()=>{setHitherTopic(6)}}>Bavlorna's Cottage</li>
+        <li on:click={()=>{setHitherTopic(7)}}>Owells</li>
     </ul>
 {/if}
 {#if $hitherTopic === 1}
@@ -37,6 +39,9 @@
 {/if}
 {#if $hitherTopic === 6}
     Bavlorna's Cottage
+{/if}
+{#if $hitherTopic === 7}
+    <Owell/>
 {/if}
 
 <style>
