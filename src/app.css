@@ -60,6 +60,10 @@ p{
   padding: 10px 20px;
 }
 
+strong{
+  font-weight: 740;
+}
+
 #app {
   display: flex;
   min-height:100%;

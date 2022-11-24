@@ -1,5 +1,6 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <script lang="ts">
+    import HitherOverview from './Hither/HitherOverview.svelte';
     import TelemyHill from './Hither/TelemyHill.svelte'
     import Owell from './Hither/Owell.svelte';
 
@@ -23,7 +24,7 @@
     </ul>
 {/if}
 {#if $hitherTopic === 1}
-    Hither Overview
+    <HitherOverview/>
 {/if}
 {#if $hitherTopic === 2}
     Slanty Tower
