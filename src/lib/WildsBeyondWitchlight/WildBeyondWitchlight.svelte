@@ -2,32 +2,31 @@
 <script lang="ts">
     import Carnival from './CarnivalSelect.svelte'
     import Hither from './HitherSelect.svelte'
-    import { witchlightChapter } from './witchlightStore';
+    // State Management
+    import { chapter, witchlightChaptersList } from '../../appStore';
 
     const changeChapter = (newChapter: number) => {
-        $witchlightChapter = newChapter;
+        $chapter = newChapter;
     }
 </script>
 
-<main>
-    {#if $witchlightChapter === 0}
+<article>
+    {#if $chapter === 0 || $chapter > 2}
         <h1>Wild Beyond the Witchlight</h1>
         <h3>Chapter Select</h3>
         <ul>
-            <li on:click={()=>{changeChapter(1)}}>Chapter 1: Witchlight Carnival</li>
-            <li on:click={()=>{changeChapter(2)}}>Chapter 2: Hither</li>
-            <li>Chapter 3: Thither</li>
-            <li>Chapter 4: Yon</li>
-            <li>Chapter 5: Palace of Heart's Desire</li>
+            {#each witchlightChaptersList as chapterInList, i}
+                <li on:click={()=>{changeChapter(i)}}>{chapterInList}</li>
+            {/each}
         </ul>
     {/if}
-    {#if $witchlightChapter === 1}
+    {#if $chapter === 1}
         <Carnival />
     {/if}
-    {#if $witchlightChapter === 2}
+    {#if $chapter === 2}
         <Hither />
     {/if}
-</main>
+</article>
 
 <style>
 

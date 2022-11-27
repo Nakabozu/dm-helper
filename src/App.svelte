@@ -13,13 +13,14 @@
 
 <main>
   <Navbar/>
-    {#if $page === 0}
-      <SelectModule/>
-    {/if}
+  
+  {#if $page === 0 || $page >= 2}
+    <SelectModule/>
+  {/if}
 
-    {#if $page === 1}
-      <WildBeyondWitchlight/>
-    {/if}
+  {#if $page === 1}
+    <WildBeyondWitchlight/>
+  {/if}
 </main>
 
 <style>
