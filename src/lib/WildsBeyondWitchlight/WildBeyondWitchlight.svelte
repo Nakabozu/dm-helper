@@ -1,7 +1,6 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <script lang="ts">
-    import Carnival from './CarnivalSelect.svelte'
-    import Hither from './HitherSelect.svelte'
+    import {CarnivalSelect, HitherSelect} from '../../components';
     // State Management
     import { chapter, witchlightChaptersList } from '../../appStore';
 
@@ -21,10 +20,10 @@
         </ul>
     {/if}
     {#if $chapter === 1}
-        <Carnival />
+        <CarnivalSelect />
     {/if}
     {#if $chapter === 2}
-        <Hither />
+        <HitherSelect />
     {/if}
 </article>
 

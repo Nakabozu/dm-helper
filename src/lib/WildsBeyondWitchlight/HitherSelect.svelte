@@ -1,8 +1,6 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <script lang="ts">
-    import HitherOverview from './Hither/HitherOverview.svelte';
-    import TelemyHill from './Hither/TelemyHill.svelte'
-    import Owell from './Hither/Owell.svelte';
+    import { HitherOverview, TelemyHill, Owell } from '../../components';
     // State Management
     import { topic } from '../../appStore';
 

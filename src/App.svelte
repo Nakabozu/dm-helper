@@ -1,8 +1,5 @@
 <script lang="ts">
-  import Navbar from './lib/common/Navbar.svelte';
-  import SelectModule from './pages/SelectModule.svelte';
-  import WildBeyondWitchlight from './lib/WildsBeyondWitchlight/WildBeyondWitchlight.svelte';
-
+  import { Navbar, SelectModule, WildBeyondWitchlight } from './components';
 	import { page, moduleMenuObjects } from './appStore';
 
   async function loadComponent(name) {

@@ -1,6 +1,5 @@
 <script lang="ts">
-    import SoundboardButton from "../../common/SoundboardButton.svelte";
-    import RippleContainer from "../../common/RippleContainer.svelte";
+    import { SoundboardButton, RippleContainer } from "../../../components";
     import FetidSwamp from "../../../assets/Fetid Swamp.mp3";
 
     import { hitherStrings } from "./hither-strings";
